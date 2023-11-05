@@ -1,0 +1,21 @@
+dbt-sales-practice:
+  target: dev-dbt-sales-practice
+
+  outputs:
+    dev-dbt-sales-practice:
+      type: bigquery
+      method: service-account
+      project: dbt-sales-practice
+      dataset: dbt_demo_raw
+      threads: 1
+      keyfile: C:\Users\asus\Desktop\Kids\git\sales-product-data-dbt\sales_product_data_dbt\env_config\dbt-sales-practice-77347055bb34.json
+      location: asia-southeast1
+
+    prod:
+      type: bigquery
+      method: service-account
+      project: dbt-sales-practice
+      dataset: dbt_demo_raw
+      threads: 1
+      keyfile: /c/Users/asus/Desktop/Kids/git/sales-product-data-dbt/sales_product_data_dbt/env_config/dbt-sales-practice-77347055bb34.json
+      location: asia-southeast1
